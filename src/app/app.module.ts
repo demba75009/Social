@@ -4,6 +4,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { WallComponent } from './wall/wall.component';
+import { UiModule } from './ui/ui.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { WallComponent } from './wall/wall.component';
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    UiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

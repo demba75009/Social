@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { POSTS } from '../mock/postm';
-import { HeroService } from '../hero.service';
+import { PostService } from '../post.service';
+
 @Component({
   selector: 'app-wall',
   templateUrl: './wall.component.html',
@@ -8,17 +9,19 @@ import { HeroService } from '../hero.service';
 })
 export class WallComponent implements OnInit {
 
- posts = POSTS;
- posts1 : POSTS[];
+    posts: POSTS[];
+    constructor(private PostService: PostService) {
 
-  constructor(private postService: postservice) {
-
-  }
-    getposts(): void {
-        this.posts = this.postService.getposts()
     }
-  ngOnInit() {
-      this.getPost();
-  }
+
+    getPOSTS(): void {
+        this.posts = this.PostService.getPOSTS()
+
+    }
+
+
+    ngOnInit() {
+        this.getPOSTS();
+    }
 
 }
