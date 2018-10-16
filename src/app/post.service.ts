@@ -14,20 +14,10 @@ export class PostService {
 
   }
 
-
-
-private  headers = new HttpHeaders({
-    'Access-Control-Allow-Origin':'*',
-    'Access-Control-Allow-Methods':'GET,POST,OPTION,PUT,PATCH,DELETE',
-    'Access-Control-Allow-Headers':'X-Requested-with, content-type',
-    'Access-Control-Allow-Credentials':'true',
-});
-
-
       getPOSTS(): Observable<Post[]>
       {
-
-          return this.http.get<Post[]>(this.postUrl(headers: this.headers))
+          return this.http.get<Post[]>(this.postUrl,
+          {headers:{'Content-Type': 'application/x-www-form-urlencoded'}})
       }
 
 }

@@ -1,27 +1,15 @@
 
-
-.post li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
-}
-
 .post
 {
 
 
-    background: silver;
-
+background: silver;
     color: black;
     width: 100px;
     height: 400px;
     text-align: center;
 
-    float: right;
-    width: 30%;
+    float: left;
+    right: 70%;
+    width: 50%;
 }

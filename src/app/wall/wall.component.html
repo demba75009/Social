@@ -1,6 +1,22 @@
 
 <ul class="post">
 	<li *ngFor="let post of posts">
-	    <span class="badge">{{post.id}}</span> {{post.name}}
+
+	    <span class="badge">  {{post.title}} </span>
+<p>
+		{{post.body}}
+
+</p>
+		{{post.author}}
 	</li>
+
 </ul>
+<div>
+	<label> name:
+		<input #postName />
+	</label>
+	<!-- (click) passes input value to add() and then clears the input -->
+	<button (click)="add(postname.value); postname.value=''">
+		add
+	</button>
+</div>
