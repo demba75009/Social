@@ -26,15 +26,8 @@ export class WallComponent implements OnInit {
         this.getPOSTS();
     }
 
-    add(name: string): void {
-        name = name.trim();
-        if (!name) { return; }
-        this.PostService.addPost({ name } as Post)
-            .subscribe(post => {
-                this.posts.push(post);
-            });
+
     }
 
 
 
-}
