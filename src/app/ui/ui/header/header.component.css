@@ -1,19 +1,47 @@
-.navbar-brand1
-{
 
+.navbar-brand2
+{
+    padding:16px;
+    font: 20px Arial;
+    text-align: center;
+    transition:all 0.3s;
+    text-decoration:none;
     float:right;
     position: relative;
-    left:70%;
+    left:45%;
+    color:white
 
 
 }
 
-.navbar-brand2
+.navbar-brand2:hover
 {
 
-    float:right;
-    position: relative;
-    left:60%;
+    background-color:blue;
+}
+
+.navbar-brand1
+ {
+     padding:16px;
+     font: 20px Arial;
+     text-align: center;
+     transition:all 0.3s;
+     text-decoration:none;
+     float:right;
+     position: relative;
+     left:65%;
+     color:white
 
 
+ }
+ i{
+
+     color:white;
+ }
+
+.navbar-brand1:hover
+{
+
+    border:none;
+    background-color:blue;
 }

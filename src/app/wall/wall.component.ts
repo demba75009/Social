@@ -23,8 +23,21 @@ export class WallComponent implements OnInit {
 
 
     ngOnInit() {
-        this.getPOSTS();
+
+            this.getPOSTS();
     }
+
+    add(title:string): void {
+        title = title.trim();
+        if (!title) { return; }
+        this.PostService.addPost( {title}  as Post)
+            .subscribe(post => {
+                this.posts.push(post);
+
+            });
+
+    }
+
 
 
     }

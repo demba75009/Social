@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { PostService } from './post.service';
 
 describe('PostService', () => {
@@ -9,4 +9,6 @@ describe('PostService', () => {
     const service: PostService = TestBed.get(PostService);
     expect(service).toBeTruthy();
   });
+
+
 });
