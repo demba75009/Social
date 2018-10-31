@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Post } from './model/post';
+import { Post } from './wall/model/post';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 
@@ -24,5 +24,17 @@ export class PostService {
         return this.getPOSTS()
 
     }
+    deletePost (post: Post| number): Observable<Post> {
+        const id = typeof post === 'number' ? post : post.id;
+        const url = `${this.postUrl}/${id}`;
+
+        return this.http.delete<Post>(this.postUrl,
+            {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
+        ;
+    }
+
+
+
+
     }
 

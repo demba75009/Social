@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
-import { Post } from '../model/post';
+import { Post } from './model/post';
 
 
 @Component({
@@ -17,6 +17,8 @@ export class WallComponent implements OnInit {
 
     }
 
+
+
     getPOSTS(): void {
         this.PostService.getPOSTS()
             .subscribe(posts => this.posts = posts);    }
@@ -27,20 +29,24 @@ export class WallComponent implements OnInit {
             this.getPOSTS();
     }
 
-    add(title:string): void {
-        title = title.trim();
-        if (!title) { return; }
-        this.PostService.addPost( {title}  as Post)
+    add(body:string): void {
+
+        body = body.trim();
+        if (!body) { return; }
+        this.PostService.addPost( {body}  as Post)
             .subscribe(post => {
                 this.posts.push(post);
-
             });
 
     }
 
-
-
+    delete(post: Post): void {
+        this.posts = this.posts.filter(h => h !== post);
+        this.PostService.deletePost(post).subscribe();
     }
+
+
+}
 
 
 
