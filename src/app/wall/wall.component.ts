@@ -29,11 +29,11 @@ export class WallComponent implements OnInit {
             this.getPOSTS();
     }
 
-    add(body:string): void {
+    add(title:string): void {
 
-        body = body.trim();
-        if (!body) { return; }
-        this.PostService.addPost( {body}  as Post)
+        title = title.trim();
+        if (!title) { return; }
+        this.PostService.addPost( {title}  as Post)
             .subscribe(post => {
                 this.posts.push(post);
             });

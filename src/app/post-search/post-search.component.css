@@ -1,0 +1,14 @@
+
+.search-component
+{
+
+float: right;
+left:50%;
+top:1px;
+}
+
+h4:hover
+{
+
+    color:blue;
+}

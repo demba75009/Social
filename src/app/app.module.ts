@@ -5,10 +5,12 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { WallComponent } from './wall/wall.component';
 import { UiModule } from './ui/ui.module';
+import { postSearchComponent } from './post-search/post-search.component';
 @NgModule({
   declarations: [
     AppComponent,
     WallComponent,
+    postSearchComponent,
 
   ],
   imports: [

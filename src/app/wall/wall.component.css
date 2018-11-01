@@ -1,11 +1,10 @@
 
-.post
+.f
 {
 
 
-background: white;
+    background: white;
     color: black;
-    width: 100px;
     height: 400px;
     text-align: center;
     border-radius:2px;
@@ -13,22 +12,22 @@ background: white;
     float: left;
     right: 70%;
     width: 50%;
+
 }
 
 .d
 {
-    float:right;
-    left:70%;
 
 }
+
 
 .delete
 {
 
     position: relative;
-    left: 245px;
+    left: 215px;
     top: -2px;
-    background-color: gray !important;
+    background-color: red;
     color: white;
 
 }

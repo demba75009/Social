@@ -1,6 +1,28 @@
+<div class ="d">
+    <label>
+        Post new title:
+            <input #postTitle />
+
+    </label>
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button (click)="add(postTitle.value); postTitle.value=''">
+            add
+        </button>
+    <app-post-search></app-post-search>
+
+</div>
+
+
+
+
+
+
+
+
 
 <ul class="post">
-	<li *ngFor="let post of posts">
+
+	<li class="f" *ngFor="let post of posts">
 
 	    <span class="badge"> {{post.id}}</span>{{post.title}}
 		<button class="delete" title="delete post"
@@ -20,13 +42,5 @@
 
 
 
-<div class ="d">
-	<label > Post new title:
-		<input #postTitle />
-	</label>
-	<!-- (click) passes input value to add() and then clears the input -->
-	<button (click)="add(postTitle.value); postTitle.value=''">
-		add
-	</button>
 
-</div>
+
