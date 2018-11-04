@@ -14,6 +14,9 @@ export class PostService {
     constructor(private http: HttpClient) {
 
     }
+    getPost(id: number): Observable<Post> {
+        return this.http.get<Post>(this.postUrl,
+            {headers: {'Content-Type': ' application/x-www-form-urlencoded'}})    }
 
     getPOSTS(): Observable<Post[]> {
         return this.http.get<Post[]>(this.postUrl,
@@ -21,6 +24,7 @@ export class PostService {
     }
 
     addPost(post: Post): Observable<Post> {
+
         return this.http.get<Post>(this.postUrl,
             {headers: {'Content-Type': ' application/x-www-form-urlencoded'}})
     }
