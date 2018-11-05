@@ -10,7 +10,7 @@
     border-radius:2px;
     border:1px solid black;
     float: left;
-    right: 70%;
+    right: 80%;
     width: 50%;
 
 }
@@ -23,7 +23,7 @@
 
     position: relative;
     left: 215px;
-    top: -2px;
+    bottom: 100%;
     background-color: red;
     color: white;
 
