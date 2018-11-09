@@ -10,29 +10,42 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 export class PostService {
 
     private postUrl = 'http://localhost/social/web/index.php/api/blog';  // URL to web api
-
+    private postUrll = 'http://localhost/social/web/index.php/api/post? body= &author=  &title= ';  // URL to web api
+    private postUrl2 = 'http://localhost/social/web/index.php/api/post?title= $body= $author= ';  // URL to web api
     constructor(private http: HttpClient) {
 
     }
     getPost(id: number): Observable<Post> {
-        return this.http.get<Post>(this.postUrl,
+        const url = `${this.postUrl}/${id}`;
+
+        return this.http.get<Post>(url,
             {headers: {'Content-Type': ' application/x-www-form-urlencoded'}})    }
 
     getPOSTS(): Observable<Post[]> {
         return this.http.get<Post[]>(this.postUrl,
             {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
+
     }
 
     addPost(post: Post): Observable<Post> {
+        const title =   post.title;
+        const body =  post.body;
 
-        return this.http.get<Post>(this.postUrl,
-            {headers: {'Content-Type': ' application/x-www-form-urlencoded'}})
+        const url = `${this.postUrll}${title}`;
+        const url1 = `${this.postUrl2}${body}`;
+
+        return this.http.post<Post>(url,post,
+            {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
+        return this.http.post<Post>(url1,post,
+            {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
+
+
     }
     deletePost (post: Post| number): Observable<Post> {
         const id = typeof post === 'number' ? post : post.id;
         const url = `${this.postUrl}/${id}`;
 
-        return this.http.delete<Post>(this.postUrl,
+        return this.http.delete<Post>(url,
             {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
         ;
     }
@@ -45,4 +58,18 @@ return this.getPOSTS()
 
     }
     }
+/*
+addHero (hero: Hero): Observable<Hero> {
+    return this.http.post<Hero>(this.heroesUrl, hero, httpOptions).pipe(
+        tap((hero: Hero) => this.log(`added hero w/ id=${hero.id}`)),
+        catchError(this.handleError<Hero>('addHero'))
+    );
+}
 
+getHero(id: number): Observable<Hero> {
+    const url = `${this.heroesUrl}/${id}`;
+return this.http.get<Hero>(url).pipe(
+    tap(_ => this.log(`fetched hero id=${id}`)),
+    catchError(this.handleError<Hero>(`getHero id=${id}`))
+);
+}*/
