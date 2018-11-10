@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Post } from './wall/model/post';
 import { Observable, of } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { HttpClient, HttpHeaders, } from '@angular/common/http'
 
 
 @Injectable({
@@ -10,12 +10,22 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 export class PostService {
 
     private postUrl = 'http://localhost/social/web/index.php/api/blog';  // URL to web api
+
     private postUrll = 'http://localhost/social/web/index.php/api/post? body= &author=  &title= ';  // URL to web api
-    private postUrl2 = 'http://localhost/social/web/index.php/api/post?title= $body= $author= ';  // URL to web api
+    private postUrl2 = 'http://localhost/social/web/index.php/api/post?title=  &author= &body=  ';  // URL to web api
     constructor(private http: HttpClient) {
 
     }
+
+    updatePost (post: Post): Observable<any>{
+
+
+        return this.http.put<Post>(this.postUrl,post,
+            {headers: {'Content-Type': ' application/x-www-form-urlencoded'}})
+    }
+
     getPost(id: number): Observable<Post> {
+
         const url = `${this.postUrl}/${id}`;
 
         return this.http.get<Post>(url,
@@ -32,13 +42,10 @@ export class PostService {
         const body =  post.body;
 
         const url = `${this.postUrll}${title}`;
-        const url1 = `${this.postUrl2}${body}`;
 
         return this.http.post<Post>(url,post,
             {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
-        return this.http.post<Post>(url1,post,
-            {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
-
+       
 
     }
     deletePost (post: Post| number): Observable<Post> {
