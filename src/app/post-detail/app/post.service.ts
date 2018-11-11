@@ -12,6 +12,7 @@ export class PostService {
     private postUrl = 'http://localhost/social/web/index.php/api/blog';  // URL to web api
 
     private postUrll = 'http://localhost/social/web/index.php/api/post? body= &author=  &title= ';  // URL to web api
+    private postUrl2 = 'http://localhost/social/web/index.php/api/post?title=  &author= &body=  ';  // URL to web api
     constructor(private http: HttpClient) {
 
     }
@@ -26,6 +27,7 @@ export class PostService {
     getPost(id: number): Observable<Post> {
 
         const url = `${this.postUrl}/${id}`;
+
         return this.http.get<Post>(url,
             {headers: {'Content-Type': ' application/x-www-form-urlencoded'}})    }
 

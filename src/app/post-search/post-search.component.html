@@ -1,11 +1,14 @@
 
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 
 
 <div class="search-component">
-  <h4>Post Search
+  <h4>
 
-  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <input #searchBox value = "recherchez" id="search-box" (keyup)="search(searchBox.value)" />
+    &nbsp;<i class="fas fa-search"></i>
   </h4>
 
   <ul class="search-result">
