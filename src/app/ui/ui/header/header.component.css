@@ -5,22 +5,19 @@
     padding: 12px;
 
 }
-.fas:hover{
+.fas:hover
+{
 
     color:red;
-
 }
+
 .navbar-brand
 {
 
     position: relative;
-    left:35%;
+    left:5%;
 }
-.navbar-brand:hover
-{
 
-    color:blue;
-}
 
 
 .navbar-brand2
@@ -32,7 +29,7 @@
     text-decoration:none;
     float:right;
     position: relative;
-    left:40%;
+    left:80%;
     color:white
 
 
@@ -40,8 +37,7 @@
 
 .navbar-brand2:hover
 {
-
-    background-color:blue;
+color:red;
 }
 
 .navbar-brand1
@@ -53,7 +49,7 @@
      text-decoration:none;
      float:right;
      position: relative;
-     left:62%;
+     left:80%;
      color:white
 
 
@@ -62,6 +58,6 @@
 
 .navbar-brand1:hover
 {
-background: blue;
+color: red;
     border:none;
 }

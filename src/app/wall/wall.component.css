@@ -16,7 +16,12 @@
 }
 
 
+.m:hover
+{
 
+    color: red;
+    text-decoration: none;
+}
 
 .delete
 {
@@ -32,10 +37,9 @@
 {
 bottom:100%;
     color:black;
-    whidth:30%;
 }
 #g:hover
 {
 
-    color:lightskyblue;
+    color:red;
 }
