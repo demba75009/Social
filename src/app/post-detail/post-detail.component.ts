@@ -2,6 +2,7 @@ import { Component, OnInit,Input } from '@angular/core';
 import { Post } from '../wall/model/post';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { WallComponent}      from '../wall/wall.component';
 
 import { PostService }  from '../post.service';
 @Component({
@@ -22,6 +23,7 @@ export class PostDetailComponent implements OnInit {
       this.getPost();
 
   }
+
     save(): void {
         this.postService.updatePost(this.post)
             .subscribe(() => this.goBack());
@@ -29,6 +31,7 @@ export class PostDetailComponent implements OnInit {
     goBack(): void {
         this.location.back();
     }
+
     getPost(): void {
         const id = +this.route.snapshot.paramMap.get('id');
         this.postService.getPost(id)

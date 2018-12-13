@@ -1,21 +1,21 @@
-<div class ="d">
-    <label>
+
+<div class ="d" >
+    <form>
          new title:
             <input #postTitle />
 
-    </label>
+    </form>
         <!-- (click) passes input value to add() and then clears the input -->
         <button (click)="add(postTitle.value); postTitle.value=''">
             <i class="fas fa-plus"> </i>
         </button>
 
-
-
+</div>
 
 
 <ul class="post">
 
-	<li class="f" *ngFor="let post of posts">
+	<li class="f" *ngFor="let post of posts" >
 
 
 
@@ -35,8 +35,6 @@
 
 
 </ul>
-
-
 
 
 

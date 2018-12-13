@@ -8,7 +8,7 @@ import { WallComponent}      from './wall/wall.component';
 const routes: Routes = [
     { path: 'posts', component: WallComponent },
     { path: 'post.id', component: WallComponent },
-    { path: 'detail/:id', component: PostDetailComponent },
+    { path: 'detail/:post.id', component: PostDetailComponent },
 
 
 

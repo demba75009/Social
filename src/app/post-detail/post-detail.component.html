@@ -1,13 +1,11 @@
 <div *ngIf="post">
+<h2>{{post.name | uppercase}} Details</h2>
+<div><span>id: </span>{{post.id}}</div>
+ <div>
+      <textarea
 
- <h1> {{post.id}}</h1>
-  <h2 >{{post.title}} Details</h2>
-  <div>{{post.body}}</div>
-  updatebody:
-  <input #postBody />
-  <button (click)="save(); add(postBody.value); post.Body.value=''"><i class="far fa-save"></i></button>
-
-</div>
-
-
+              placeholder="mettre a jour votre article"></textarea>
+ </div>
 <button (click)="goBack()">go back</button>
+<button (click)="save()">save</button>
+</div>
