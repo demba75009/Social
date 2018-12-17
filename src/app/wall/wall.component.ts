@@ -12,7 +12,6 @@ export class WallComponent implements OnInit {
 
     posts: Post[];
 
-
     constructor(private PostService: PostService) {
 
     }
@@ -41,17 +40,10 @@ export class WallComponent implements OnInit {
             });
 
 
-    }
-    addBody(body:string): void {
-
-        body = body.trim();
-        if (!body) { return; }
-        this.PostService.addPost( {body}  as Post)
-            .subscribe(post => {
-                this.posts.push(post);
-            });
 
     }
+
+
 
     delete(post: Post): void {
         this.posts = this.posts.filter(h => h !== post);

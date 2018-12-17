@@ -1,11 +1,13 @@
-<div *ngIf="post">
-<h2>{{post.name | uppercase}} Details</h2>
-<div><span>id: </span>{{post.id}}</div>
- <div>
-      <textarea
 
-              placeholder="mettre a jour votre article"></textarea>
- </div>
-<button (click)="goBack()">go back</button>
-<button (click)="save()">save</button>
+<div *ngIf="post" >
+
+    <h2>{{post.title | uppercase}} Details</h2>
+    <div><span>id: </span>{{post.id}}</div>
+    <div>
+        <label>title:
+            <input [(ngModel)]="post.title" placeholder="modifiez titre"/>
+        </label>
+    </div>
+
 </div>
+<button (click)="goBack()">go back</button>

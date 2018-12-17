@@ -12,6 +12,7 @@ import { PostService }  from '../post.service';
 })
 export class PostDetailComponent implements OnInit {
     @Input() post:Post;
+    selectedPost: Post;
 
     constructor(
         private route: ActivatedRoute,
@@ -23,6 +24,9 @@ export class PostDetailComponent implements OnInit {
       this.getPost();
 
   }
+    onSelect(post: Post): void {
+        this.selectedPost = post;
+    }
 
     save(): void {
         this.postService.updatePost(this.post)

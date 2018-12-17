@@ -11,21 +11,21 @@ export class PostService {
 
     private postUrl = 'http://localhost/social/web/index.php/api/blog';  // URL to web api
 
-    private postUrll = 'http://localhost/social/web/index.php/api/post? author=&body=&title= ';  // URL to web api
+    private postUrl1 = 'http://localhost/social/web/index.php/api/post? author=&title=&body= ';  // URL to web api
+
 
     constructor(private http: HttpClient) {
 
     }
 
     updatePost (post: Post): Observable<any>{
-
-
-        return this.http.put<Post>(this.postUrl,post,
+        const id = post.id;
+        const url = `${this.postUrl}/${id}`;
+        return this.http.put<Post>(url,post,
             {headers: {'Content-Type': ' application/x-www-form-urlencoded'}})
     }
 
-    getPost( post:Post|number): Observable<Post> {
-        const id = typeof post === 'number' ? post : post.id;
+    getPost(id: number): Observable<Post> {
 
         const url = `${this.postUrl}/${id}`;
         return this.http.get<Post>(url,
@@ -41,7 +41,7 @@ export class PostService {
         const title =   post.title;
         const body =  post.body;
 
-        const url = `${this.postUrll }${title}`;
+        const url = `${this.postUrl1 }${title}`;
 
 
         return this.http.post<Post>(url,post,
@@ -49,6 +49,10 @@ export class PostService {
        
 
     }
+
+
+
+
     deletePost (post: Post| number): Observable<Post> {
         const id = typeof post === 'number' ? post : post.id;
         const url = `${this.postUrl}/${id}`;

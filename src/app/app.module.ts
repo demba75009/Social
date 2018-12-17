@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+
 import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { WallComponent } from './wall/wall.component';
@@ -21,6 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
       NgbModule,
       UiModule,
       HttpClientModule,
+
+      FormsModule,
       AppRoutingModule
   ],
   providers: [],

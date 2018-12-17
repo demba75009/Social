@@ -13,17 +13,17 @@
 </div>
 
 
-<ul class="post">
+<ul class="posts">
 
-	<li class="f" *ngFor="let post of posts" >
-
-
-
-            <span class="badge"> {{post.id}}</span> <a class = "m"routerLink="/detail/{{post.id}}">
-        {{post.title}}</a>
+    <li class ="f" *ngFor="let post of posts"
+        >
+        <a routerLink="/detail/{{post.id}}">
+         {{post.id}}        {{post.title}}</a>
         {{post.body}}
 
-<p>
+
+
+        <p>
 
 </p>
 		{{post.author}}
