@@ -1,24 +1,30 @@
 
 <div class ="d" >
-    <form>
-         new title:
-            <input #postTitle />
+    <h2>ADD A NEW POST:</h2>
 
-    </form>
-        <!-- (click) passes input value to add() and then clears the input -->
-        <button (click)="add(postTitle.value); postTitle.value=''">
-            <i class="fas fa-plus"> </i>
-        </button>
+    <section>
+        <h3>new post title:</h3>
+            <input #postTitle />
+    </section>
+
+    <section>
+        <h3>post description:</h3>
+            <input #postDescription />
+    </section>
+    <h3>author description:</h3>
+        <input #postauthor />
+
 
 </div>
 
-
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class ="dkt" (click)="add(postTitle.value,postDescription .value,postauthor.value); postTitle.value='';postDescription.value =''; postauthor.value=''">
+        ADD
+    </button>
 <ul class="posts">
 
-    <li class ="f" *ngFor="let post of posts"
-        >
-        <a routerLink="/detail/{{post.id}}">
-         {{post.id}}        {{post.title}}</a>
+    <li class ="f" *ngFor="let post of posts">
+         {{post.id}}        {{post.title}}
         {{post.body}}
 
 
@@ -30,9 +36,7 @@
 
         <button class="delete" title="delete post"
                 (click)="delete(post)">x</button>
-
-	</li>
-
+        <a routerLink="/detail/{{post.id}}"> <i class="fas fa-eye"></i> </a>   </li>
 
 </ul>
 

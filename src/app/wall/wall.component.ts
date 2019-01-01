@@ -28,11 +28,13 @@ export class WallComponent implements OnInit {
             this.getPOSTS();
     }
 
-    add(title:string): void {
+    add(title:string, body: string,auteur:string): void {
         title = title.trim();
+        body = body.trim();
+        auteur = auteur.trim();
 
-        if (!title) { return; }
-        this.PostService.addPost( {title}  as Post)
+        if (!title|| !body|| !auteur) { return; }
+        this.PostService.addPost( {title,body,auteur}  as Post)
             .subscribe(post => {
                 this.posts.push(post);
 

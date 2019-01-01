@@ -1,13 +1,28 @@
 
-<div *ngIf="post" >
 
+
+<div *ngIf="post" [class.selected]="post === selectedPost"
+     (click)="onSelect(post)">
+    <h1><span>id: </span>{{post.id}}</h1>
     <h2>{{post.title | uppercase}} Details</h2>
-    <div><span>id: </span>{{post.id}}</div>
+
+    {{post.body}}
     <div>
-        <label>title:
+        <label>
             <input [(ngModel)]="post.title" placeholder="modifiez titre"/>
+
+
         </label>
     </div>
+        <label>
+        <input [(ngModel)]="post.body" placeholder="modifiez body"/>
+        </label>
+
 
 </div>
+<div>
+    <button (click)="save()" >save</button>
+
+</div>
+
 <button (click)="goBack()">go back</button>

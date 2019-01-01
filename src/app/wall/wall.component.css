@@ -5,13 +5,11 @@
 
 }
 
-
-
 .f
 {
 
 
-    background: white;
+
     color: black;
     height: 400px;
     text-align: center;
@@ -54,4 +52,18 @@ bottom:100%;
 .post{
 
     background: gray;
+}
+.dkt
+{
+    border:1px solid black;
+background: blue;
+    position: relative;
+    left:25%;
+    float:bottom;
+    top:60%;
+}
+.dkt:hover
+{
+    background: red;
+
 }

@@ -11,7 +11,8 @@ export class PostService {
 
     private postUrl = 'http://localhost/social/web/index.php/api/blog';  // URL to web api
 
-    private postUrl1 = 'http://localhost/social/web/index.php/api/post? author=&title=&body= ';  // URL to web api
+    private postUrl1 = 'http://localhost/social/web/index.php/api/post?author=&title= ';  // URL to web api
+    private postUrl2 = 'http://localhost/social/web/index.php/api/put';  // URL to web api
 
 
     constructor(private http: HttpClient) {
@@ -20,7 +21,7 @@ export class PostService {
 
     updatePost (post: Post): Observable<any>{
         const id = post.id;
-        const url = `${this.postUrl}/${id}`;
+        const url = `${this.postUrl2}/${id}`;
         return this.http.put<Post>(url,post,
             {headers: {'Content-Type': ' application/x-www-form-urlencoded'}})
     }
@@ -40,8 +41,10 @@ export class PostService {
     addPost(post: Post): Observable<Post> {
         const title =   post.title;
         const body =  post.body;
+        const auteur =  post.auteur;
 
-        const url = `${this.postUrl1 }${title}`;
+
+        const url = `${this.postUrl1 }${title}&body=${body}&author=${auteur}`;
 
 
         return this.http.post<Post>(url,post,

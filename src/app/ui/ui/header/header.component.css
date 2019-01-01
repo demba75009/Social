@@ -1,4 +1,22 @@
+.r{
+    font: 20px Arial;
+    color:black;
+    width:90px;
 
+    transition:all 0.3s;
+    text-decoration:none;
+    position: relative;
+    left:35%;
+    float:bottom;
+    top:60%;
+
+}
+.r:hover
+{
+    color:red;
+    text-decoration:none;
+
+}
 .fas {
 
     color:deepskyblue;
