@@ -21,7 +21,14 @@
 
 }
 
+.publiez
+{
+    position: relative;
 
+    left:45%;
+    top:60%;
+
+}
 .m:hover
 {
 
@@ -39,6 +46,7 @@
     color: white;
 
 }
+
 #g
 {
 bottom:100%;
@@ -49,6 +57,7 @@ bottom:100%;
 
     color:red;
 }
+
 .post{
 
     background: gray;

@@ -21,22 +21,36 @@
     <button class ="dkt" (click)="add(postTitle.value,postDescription .value,postauthor.value); postTitle.value='';postDescription.value =''; postauthor.value=''">
         ADD
     </button>
+<section class="publiez">
+    <h3>Posts :</h3>
+
+</section>
+
 <ul class="posts">
 
     <li class ="f" *ngFor="let post of posts">
-         {{post.id}}        {{post.title}}
-        {{post.body}}
+        <section>{{post.id}}   </section>
+
+     <h3> <a routerLink="/detail/{{post.id}}">    {{post.title}}</a></h3>
+        <section>
+            {{post.body}}
+
+        </section>
+
 
 
 
         <p>
 
 </p>
-		{{post.author}}
-
+        <section>
+            <strong>Add by:	{{post.author}}</strong>
+        </section>
+<section>
         <button class="delete" title="delete post"
                 (click)="delete(post)">x</button>
-        <a routerLink="/detail/{{post.id}}"> <i class="fas fa-eye"></i> </a>   </li>
+</section>
+         </li>
 
 </ul>
 
