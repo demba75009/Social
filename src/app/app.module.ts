@@ -10,12 +10,14 @@ import { UiModule } from './ui/ui.module';
 import { postSearchComponent } from './post-search/post-search.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TopComponent } from './top/top.component';
 @NgModule({
   declarations: [
     AppComponent,
     WallComponent,
     postSearchComponent,
     PostDetailComponent,
+    TopComponent,
 
   ],
   imports: [

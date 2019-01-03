@@ -1,3 +1,35 @@
+
+
+.top
+{
+
+    text-align: center;
+    text-decoration-color:#fff;
+    width:15%;
+
+    position: relative;
+
+    left:45%;
+    max-height: 120px;
+    min-width: 120px;
+    background-color: #607D8B;
+    border-radius: 2px;
+    transition:all 0.3s;
+    text-decoration:none;
+
+}
+
+.top:hover
+{
+    color:#fff;
+    width:15%;
+
+    border:none;
+    background-color:red;
+}
+
+
+
 #r
 {
     float:right;
@@ -23,6 +55,7 @@
 
 .publiez
 {
+
     position: relative;
 
     left:45%;
@@ -58,18 +91,17 @@ bottom:100%;
     color:red;
 }
 
-.post{
-
-    background: gray;
-}
 .dkt
 {
-    border:1px solid black;
-background: blue;
+
     position: relative;
     left:25%;
     float:bottom;
     top:60%;
+    max-height: 120px;
+    min-width: 120px;
+    background-color: #607D8B;
+    border-radius: 2px;
 }
 .dkt:hover
 {
