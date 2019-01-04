@@ -1,4 +1,3 @@
-<section class ="top">     <a routerLink="/top">posts tendances</a></section>
 
 <div class ="d" >
     <h2>ADD A NEW POST:</h2>
@@ -29,7 +28,7 @@
 
 <ul class="posts">
 
-    <li class ="f" *ngFor="let post of posts">
+    <div class ="f" *ngFor="let post of posts">
         <section>{{post.id}}   </section>
 
      <h3> <a routerLink="/detail/{{post.id}}">    {{post.title}}</a></h3>
@@ -53,7 +52,7 @@
         <button class="delete" title="delete post"
                 (click)="delete(post)">x</button>
 </section>
-         </li>
+         </div>
 
 </ul>
 

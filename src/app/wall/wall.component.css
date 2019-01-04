@@ -1,32 +1,6 @@
 
 
-.top
-{
 
-    text-align: center;
-    text-decoration-color:#fff;
-    width:15%;
-
-    position: relative;
-
-    left:45%;
-    max-height: 120px;
-    min-width: 120px;
-    background-color: #607D8B;
-    border-radius: 2px;
-    transition:all 0.3s;
-    text-decoration:none;
-
-}
-
-.top:hover
-{
-    color:#fff;
-    width:15%;
-
-    border:none;
-    background-color:red;
-}
 
 
 
@@ -48,8 +22,8 @@
     border-radius:2px;
     border:1px solid black;
     float: left;
-    right: 80%;
-    width: 50%;
+    min-width: 33%;
+
 
 }
 
@@ -73,7 +47,7 @@
 {
 
     position: relative;
-    left: 215px;
+    left: 150px;
     bottom: 100%;
     background-color: red;
     color: white;
