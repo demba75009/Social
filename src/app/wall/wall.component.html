@@ -1,3 +1,4 @@
+// cette balise permet d'ajoute un  nouveau post
 
 <div class ="d" >
     <h2>ADD A NEW POST:</h2>
@@ -21,6 +22,8 @@
     <button class ="dkt" (click)="add(postTitle.value,postDescription .value,postauthor.value); postTitle.value='';postDescription.value =''; postauthor.value=''">
         ADD
     </button>
+
+//on affiche les post présent dans la bdd
 <section class="publiez">
     <h3>Posts :</h3>
 
@@ -31,7 +34,9 @@
     <div class ="f" *ngFor="let post of posts">
         <section>{{post.id}}   </section>
 
+       //on crée un lien qui va permmetre de voir un post en detail
      <h3> <a routerLink="/detail/{{post.id}}">    {{post.title}}</a></h3>
+
         <section>
             {{post.body}}
 
@@ -40,15 +45,14 @@
 
 
 
-        <p>
 
-</p>
         <section>
             <strong>    <img width="30" alt="Angular Logo" src="data:image/png;base64,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">
                 :	{{post.author}}</strong>
         </section>
 
 <section>
+    // cette fonction permet de supprimer un post
         <button class="delete" title="delete post"
                 (click)="delete(post)">x</button>
 </section>

@@ -1,3 +1,4 @@
+//on importe les différentes bibliothéque
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
 import { Post } from './model/post';
@@ -9,7 +10,7 @@ import { Post } from './model/post';
   styleUrls: ['./wall.component.css']
 })
 export class WallComponent implements OnInit {
-
+//on utilise le tableau Post dans la biblliothéque post
     posts: Post[];
 
     constructor(private PostService: PostService) {
@@ -17,6 +18,7 @@ export class WallComponent implements OnInit {
     }
 
 
+// on va chechez tout les post présent dans la bdd
 
     getPOSTS(): void {
         this.PostService.getPOSTS()
@@ -24,9 +26,10 @@ export class WallComponent implements OnInit {
 
 
     ngOnInit() {
-
+//on appelle la fonction dans le main
             this.getPOSTS();
     }
+// cette fonction crée permet d ajouter un post
 
     add(title:string, body: string,auteur:string): void {
         title = title.trim();
@@ -46,6 +49,7 @@ export class WallComponent implements OnInit {
     }
 
 
+// cette fonction crée  permet de supprimer un post
 
     delete(post: Post): void {
         this.posts = this.posts.filter(h => h !== post);
