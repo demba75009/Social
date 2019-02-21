@@ -71,7 +71,7 @@ export class PostService {
         ;
     }
 
-    // cette fonction permet de cherchez un post en foction de ce que le client aura  écrit
+    // cette fonction permet de affichez les posts en foction de ce que le client aura  écrit
 
     searchPosts(term: string): Observable<Post[]> {
         if (!term.trim()) {
