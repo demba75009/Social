@@ -17,7 +17,8 @@
     border-radius:2px;
     border:1px solid black;
     float: left;
-    min-width: 33%;
+    min-width: 62%;
+    max-width: 100%;
 
 
 }
