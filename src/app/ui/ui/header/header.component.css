@@ -23,6 +23,11 @@
     padding: 12px;
 
 }
+.far:hover
+{
+
+    color:red;
+}
 .fas:hover
 {
 

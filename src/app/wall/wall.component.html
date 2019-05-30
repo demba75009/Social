@@ -1,5 +1,6 @@
 // cette balise div permet d'ajoute un  nouveau post
 
+
 <div class ="d" >
     <h2>ADD A NEW POST:</h2>
 
@@ -14,7 +15,6 @@
     </section>
     <h3>author description:</h3>
         <input #postauthor />
-
 
 </div>
 
@@ -41,6 +41,7 @@
             {{post.body}}
 
         </section>
+        {{post.image}}
 
 
 
@@ -54,10 +55,12 @@
     // cette fonction permet de supprimer un post
         <button class="delete" title="delete post"
                 (click)="delete(post)">x</button>
+
 </section>
          </div>
 
 </ul>
+
 
 
 

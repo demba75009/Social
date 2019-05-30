@@ -54,6 +54,7 @@ export class WallComponent implements OnInit {
     delete(post: Post): void {
         this.posts = this.posts.filter(h => h !== post);
         this.PostService.deletePost(post).subscribe();
+
     }
 
 

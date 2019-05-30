@@ -3,4 +3,6 @@ export class Post {
   title: string;
   body:string;
   auteur:string;
+  create_at:string;
+  image:string;
 }
