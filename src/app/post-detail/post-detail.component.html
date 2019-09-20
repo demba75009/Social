@@ -1,4 +1,4 @@
-//on affiche un post selon son id
+<!--on affiche un post selon son id-->
 
 
 <div *ngIf="post" [class.selected]="post === selectedPost"
@@ -7,7 +7,7 @@
     <h2>{{post.title | uppercase}} Details</h2>
 
     {{post.body}}
-    //on crée deux input qui nous permet de modifiez le post
+    <!--on crée deux input qui nous permet de modifiez le post-->
     <div>
         <label>
             <input [(ngModel)]="post.title" placeholder="modifiez titre"/>
@@ -21,10 +21,10 @@
 
 
 </div>
-//on sauvegarde les modifications
+<!--on sauvegarde les modifications-->
 <div>
     <button (click)="save()" >save</button>
 
 </div>
-//on retourne a la page précédente
+<!--on retourne a la page précédente-->
 <button (click)="goBack()">go back</button>

@@ -1,4 +1,4 @@
-// cette balise div permet d'ajoute un  nouveau post
+<!-- cette balise div permet d'ajoute un  nouveau post-->
 
 
 <div class ="d" >
@@ -23,7 +23,7 @@
         ADD
     </button>
 
-//on affiche les post présent dans la bdd
+<!--on affiche les post présent dans la bdd-->
 <section class="publiez">
     <h3>Posts :</h3>
 
@@ -34,7 +34,7 @@
     <div class ="f" *ngFor="let post of posts">
         <section>{{post.id}}   </section>
 
-       //on crée un lien qui va permmetre de voir un post en detail
+       <!--on crée un lien qui va permmetre de voir un post en detail-->
      <h3> <a routerLink="/detail/{{post.id}}">    {{post.title}}</a></h3>
 
         <section>
@@ -52,7 +52,7 @@
         </section>
 
 <section>
-    // cette fonction permet de supprimer un post
+    <!-- cette fonction permet de supprimer un post -->
         <button class="delete" title="delete post"
                 (click)="delete(post)">x</button>
 
